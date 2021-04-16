@@ -19,7 +19,7 @@ header{
 }
 
 .desplegable{
-    display: block;
+    display: none;
     min-height: 350px;
     min-width: 300px;
     border: 1px solid black;
