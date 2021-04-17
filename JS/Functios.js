@@ -1,5 +1,4 @@
 const productos = [];
-
 const botones = document.querySelectorAll(".tarjeta button");
 const carritoProductos = document.querySelector("tbody")
 botones.forEach((boton)=>{
@@ -15,7 +14,6 @@ botones.forEach((boton)=>{
 
         }
         agregarProducto(producto);
-        leerImagen(producto.imagen)
     }
     )
 
@@ -32,21 +30,12 @@ botonEliminar.addEventListener('click', (evento)=>{
 
     
 
-const leerImagen = (producto) =>{
-    const reader = new FileReader()
-    reader.onload = function () {
-        const img = new Image()
-        img.src = reader.result
-        console.log(img.src)
-    }
-    reader.readAsDataURL(producto.imagen)
-}
         
 const agregarProducto = (producto) =>{
     const prd = document.createElement("tr")
     prd.innerHTML = `
         <td>
-            <img src = "${producto.imagen}" >
+            <img src ="${producto.imagen}">
         </td>
         <td>
             ${producto.nombre}
